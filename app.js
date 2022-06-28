@@ -6,8 +6,9 @@
 const names = require('./4-name');
 const sayHi = require('./5-utiles');
 const data = require('./6-alternative-flavor');
-console.log(data);
+require('./7-mind-grenade');
+// console.log(data);
 
-sayHi('meme');
-sayHi(names.john);
-sayHi(names.mary);
+// sayHi('meme');
+// sayHi(names.john);
+// sayHi(names.mary);
