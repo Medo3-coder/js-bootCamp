@@ -3,12 +3,10 @@
 
 // every time u start ur module start with ./
 
-const names = require('./4-name');
-const sayHi = require('./5-utiles');
-const data = require('./6-alternative-flavor');
-require('./7-mind-grenade');
-// console.log(data);
+const { readFileSync, writeFileSync } = require('fs');
 
-// sayHi('meme');
-// sayHi(names.john);
-// sayHi(names.mary);
+const firstFile = readFileSync('./content/first.txt', 'utf8');
+const secondFile = readFileSync('./content/second.txt', 'utf8');
+console.log(firstFile, secondFile);
+
+writeFileSync('./content/result-async.txt', `here is result : ${firstFile} ${secondFile}`, { flag: 'a' });
